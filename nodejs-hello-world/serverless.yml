@@ -9,3 +9,5 @@ provider:
 functions:
   functionmock:
     handler: index.handler
+    environment:
+      IOPIPE_TOKEN: <CHANGE ME>

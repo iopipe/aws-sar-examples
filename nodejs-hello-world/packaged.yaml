@@ -1,0 +1,15 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: 'SAM template for Serverless framework service: '
+Resources:
+  Functionmock:
+    Properties:
+      CodeUri: s3://iopipe-sar-examples/dfd43c6a69e1fc3ed7b2fb20134cf87e
+      Environment:
+        Variables:
+          IOPIPE_TOKEN: <CHANGE ME>
+      Handler: index.handler
+      MemorySize: 128
+      Runtime: nodejs6.10
+      Timeout: 3
+    Type: AWS::Serverless::Function
+Transform: AWS::Serverless-2016-10-31
