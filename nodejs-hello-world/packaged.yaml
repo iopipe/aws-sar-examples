@@ -1,12 +1,16 @@
 AWSTemplateFormatVersion: '2010-09-09'
 Description: 'SAM template for Serverless framework service: '
+Parameters:
+  IOpipeToken:
+    Type: String
 Resources:
   Functionmock:
     Properties:
       CodeUri: s3://iopipe-sar-examples/dfd43c6a69e1fc3ed7b2fb20134cf87e
       Environment:
         Variables:
-          IOPIPE_TOKEN: <CHANGE ME>
+          IOPIPE_TOKEN:
+            Ref: IOpipeToken
       Handler: index.handler
       MemorySize: 128
       Runtime: nodejs6.10
