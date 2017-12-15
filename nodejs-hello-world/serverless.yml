@@ -1,0 +1,11 @@
+service: iopipe-hello-world
+
+plugins:
+  - serverless-sam
+
+provider:
+  name: aws
+  runtime: nodejs6.10
+functions:
+  functionmock:
+    handler: index.handler
