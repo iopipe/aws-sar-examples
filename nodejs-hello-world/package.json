@@ -1,17 +1,16 @@
 {
   "name": "iopipe-sar-example",
   "version": "1.0.0",
-  "description": "",
+  "description": "A function boilerplate to enable IOpipe",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
+  "author": "IOpipe",
   "license": "Apache-2.0",
   "dependencies": {
-    "@iopipe/trace": "^0.3.0",
-    "iopipe": "^1.2.1"
+    "@iopipe/iopipe": "^1.5.0"
   },
   "devDependencies": {
     "serverless-sam": "0.0.2"
