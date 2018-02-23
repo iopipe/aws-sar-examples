@@ -1,0 +1,11 @@
+.DS_Store
+node_modules
+dist
+compiled
+*.sublime-project
+*.sublime-workspace
+*.log
+.env
+.serverless
+package-lock.json
+packaged.yaml

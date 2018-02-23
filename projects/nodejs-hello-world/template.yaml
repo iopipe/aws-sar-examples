@@ -6,7 +6,7 @@ Parameters:
 Resources:
   IOpipeHelloWorld:
     Properties:
-      CodeUri: s3://iopipe-sar-examples/dfd43c6a69e1fc3ed7b2fb20134cf87e
+      CodeUri: .
       Environment:
         Variables:
           IOPIPE_TOKEN:
