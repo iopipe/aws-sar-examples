@@ -1,0 +1,39 @@
+{
+  "name": "aws-sar-examples",
+  "version": "1.0.0",
+  "description": "Sources for AWS Serverless Application Repo",
+  "main": "index.js",
+  "scripts": {
+    "build": "node src/buildDeploy --build=true",
+    "deploy": "node src/buildDeploy --build=true --deploy=true",
+    "lint": "iopipe-scripts lint",
+    "validate": "iopipe-scripts validate"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iopipe/aws-sar-examples.git"
+  },
+  "keywords": [],
+  "author": "IOpipe",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iopipe/aws-sar-examples/issues"
+  },
+  "homepage": "https://github.com/iopipe/aws-sar-examples#readme",
+  "devDependencies": {
+    "@iopipe/scripts": "^1.4.1",
+    "aws-sam-local": "^0.2.6",
+    "cross-spawn": "^6.0.4",
+    "fs-extra": "^5.0.0",
+    "lodash": "^4.17.5",
+    "yargs": "^11.0.0"
+  },
+  "eslintConfig": {
+    "extends": "./node_modules/@iopipe/scripts/eslint.js"
+  },
+  "eslintIgnore": [
+    "node_modules",
+    "dist",
+    "coverage"
+  ]
+}
