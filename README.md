@@ -1,5 +1,7 @@
 # AWS Serverless Application Repository Projects
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/iopipe/aws-sar-examples.svg)](https://greenkeeper.io/)
+
 Sources for AWS Serverless Application Repo
 
 ## Projects
