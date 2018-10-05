@@ -3,15 +3,19 @@
 const iopipe = require('@iopipe/iopipe')();
 
 exports.handler = iopipe((event, context) => {
-  // log custom metrics for IOpipe search + alerting
-  const log = context.iopipe.log;
-  log('custom-metric', 100);
+  const { label, mark, metric } = context.iopipe;
+
+  // label invocations to view invocations based on function behavior
+  label('special-invocation');
 
   // create custom traces
-  const mark = context.iopipe.mark;
   mark.start('test-trace');
   // some code you want to measure
   mark.end('test-trace');
+
+  // create custom metrics to expose app info to IOpipe search + alerting
+  metric('custom-metric', 99);
+  metric('another-metric', 'a handy string here');
 
   context.succeed('Hello World!');
 });

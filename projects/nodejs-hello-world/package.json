@@ -1,6 +1,6 @@
 {
   "name": "iopipe-sar-example",
-  "version": "1.1.2",
+  "version": "1.2.0",
   "description": "A function boilerplate to enable IOpipe",
   "main": "index.js",
   "scripts": {
@@ -10,7 +10,7 @@
   "author": "IOpipe",
   "license": "Apache-2.0",
   "dependencies": {
-    "@iopipe/iopipe": "^1.6.0"
+    "@iopipe/iopipe": "^1.11.0"
   },
   "devDependencies": {}
 }
