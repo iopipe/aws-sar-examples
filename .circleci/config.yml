@@ -1,0 +1,48 @@
+defaults: &defaults
+  docker:
+    - image: iopipe/circleci
+  working_directory: ~/circleci-deployment
+
+version: 2
+jobs:
+  build:
+    <<: *defaults
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+          - v1-dependencies-{{ checksum "package.json" }}
+          - v1-dependencies-
+      - run: yarn install
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-dependencies-{{ checksum "package.json" }}
+      - run: yarn run validate
+
+  deployment:
+    <<: *defaults
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+          - v1-dependencies-{{ checksum "package.json" }}
+          - v1-dependencies-
+      - run: yarn install
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-dependencies-{{ checksum "package.json" }}
+      - run: yarn run deploy
+
+workflows:
+  version: 2
+  all:
+    jobs:
+      - build
+      - deployment:
+          requires:
+            - build
+          filters:
+            branches:
+              only: master
