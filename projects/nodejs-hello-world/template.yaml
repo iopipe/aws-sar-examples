@@ -13,7 +13,7 @@ Resources:
             Ref: IOpipeToken
       Handler: index.handler
       MemorySize: 128
-      Runtime: nodejs6.10
+      Runtime: nodejs8.10
       Timeout: 3
     Type: AWS::Serverless::Function
 Transform: AWS::Serverless-2016-10-31
