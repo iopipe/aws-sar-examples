@@ -569,12 +569,6 @@ asynckit@^0.4.0:
   version "0.4.0"
   resolved "https://registry.yarnpkg.com/asynckit/-/asynckit-0.4.0.tgz#c79ed97f7f34cb8f2ba1bc9790bcc366474b4b79"
 
-aws-sam-local@^0.2.6:
-  version "0.2.6"
-  resolved "https://registry.yarnpkg.com/aws-sam-local/-/aws-sam-local-0.2.6.tgz#c646951af43fa8332cb7630375b712d41cb6623d"
-  dependencies:
-    go-npm "^0.1.8"
-
 aws-sign2@~0.6.0:
   version "0.6.0"
   resolved "https://registry.yarnpkg.com/aws-sign2/-/aws-sign2-0.6.0.tgz#14342dd38dbcc94d0e5b87d763cd63612c0e794f"
@@ -3211,14 +3205,6 @@ globby@^7.1.1:
     pify "^3.0.0"
     slash "^1.0.0"
 
-go-npm@^0.1.8:
-  version "0.1.9"
-  resolved "https://registry.yarnpkg.com/go-npm/-/go-npm-0.1.9.tgz#85c1315dcb05541ec63a60238dd39e3c0a30704f"
-  dependencies:
-    mkdirp "^0.5.1"
-    request "^2.81.0"
-    tar "^2.2.1"
-
 got@^6.7.1:
   version "6.7.1"
   resolved "https://registry.yarnpkg.com/got/-/got-6.7.1.tgz#240cd05785a9a18e561dc1b44b41c763ef1e8db0"
@@ -5831,7 +5817,7 @@ request@2.81.0:
     tunnel-agent "^0.6.0"
     uuid "^3.0.0"
 
-request@^2.72.0, request@^2.74.0, request@^2.79.0, request@^2.81.0:
+request@^2.72.0, request@^2.74.0, request@^2.79.0:
   version "2.83.0"
   resolved "https://registry.yarnpkg.com/request/-/request-2.83.0.tgz#ca0b65da02ed62935887808e6f510381034e3356"
   dependencies:

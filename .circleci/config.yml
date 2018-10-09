@@ -1,6 +1,6 @@
 defaults: &defaults
   docker:
-    - image: iopipe/circleci
+    - image: iopipe/circleci-sam
   working_directory: ~/circleci-deployment
 
 version: 2
@@ -33,7 +33,6 @@ jobs:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
-      - run: pip install -U pip setuptools
       - run: pip install --user aws-sam-cli
       - run: yarn run validate
       - run: yarn run deploy
